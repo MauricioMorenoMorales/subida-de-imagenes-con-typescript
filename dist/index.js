@@ -4,4 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const app_1 = __importDefault(require("./app"));
-(async () => app_1.default.listen(app_1.default.get('port'), () => console.log(`App running on port ${app_1.default.get('port')}`)))();
+const database_1 = require("./database");
+(async () => {
+    app_1.default.listen(app_1.default.get('port'), () => console.log(`>>>App running on port ${app_1.default.get('port')}`));
+    database_1.startConnection();
+})();
