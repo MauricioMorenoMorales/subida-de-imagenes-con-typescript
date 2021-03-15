@@ -22,5 +22,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const controller = __importStar(require("../controllers/index.controller"));
 const router = express_1.Router();
-router.route('/').get(controller.GetPhoto);
+router.route('/photos').post(controller.createPhoto).get(controller.getPhotos);
 exports.default = router;

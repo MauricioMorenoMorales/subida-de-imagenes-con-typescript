@@ -1,0 +1,12 @@
+@host = http://localhost:4444/api/photos
+
+###
+GET {{host}}
+
+###
+POST {{host}}
+Content-Type: application/json
+
+{
+	"text":"Hola mundo"
+}
