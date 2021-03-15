@@ -18,9 +18,16 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const controller = __importStar(require("../controllers/index.controller"));
 const router = express_1.Router();
-router.route('/photos').post(controller.createPhoto).get(controller.getPhotos);
+const multer_1 = __importDefault(require("../libs/multer"));
+router
+    .route('/photos')
+    .post(multer_1.default.single('image'), controller.createPhoto)
+    .get(controller.getPhotos);
 exports.default = router;

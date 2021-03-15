@@ -5,8 +5,8 @@ GET {{host}}
 
 ###
 POST {{host}}
-Content-Type: application/json
+Content-Type: multipart/form-data
 
 {
-	"text":"Hola mundo"
+	"image": fi
 }
