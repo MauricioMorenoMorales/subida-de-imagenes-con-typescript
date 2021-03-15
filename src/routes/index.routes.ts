@@ -8,4 +8,10 @@ router
 	.post(multer.single('image'), controller.createPhoto)
 	.get(controller.getPhotos)
 
+router
+	.route('/photos/:id')
+	.get(controller.getPhoto)
+	.delete(controller.deletePhoto)
+	.put(controller.updatePhoto)
+
 export default router

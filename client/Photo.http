@@ -4,9 +4,16 @@
 GET {{host}}
 
 ###
-POST {{host}}
-Content-Type: multipart/form-data
+GET {{host}}/604fa99141a872789806f148
+
+###
+DELETE {{host}}/604fad13cacef0896d7af6d5
+
+###
+PUT {{host}}/604faea68da8ed9724c86082
+Content-Type: application/json
 
 {
-	"image": fi
+	"title":"Vacaciones en acapulco",
+	"description":"Con un vato todo ebrio"
 }
